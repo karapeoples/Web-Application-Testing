@@ -9,20 +9,20 @@ function App() {
 
  
 
-const reset = () => {
+ const reset = () => {
     setBalls(0);
     setStrikes(0);
   }
 
-const ballCount = () => {
+ const ballCount = () => {
   balls === 4 ? reset() : setBalls(balls => balls + 1);
   }
 
-const strikeCount = () => {
+ const strikeCount = () => {
     strikes === 3 ? reset() : setStrikes(strikes => strikes + 1);
   }
 
-  const foul = () => {
+ const foul = () => {
    strikes === 2? setStrikes(2): setStrikes(strikes => strikes+1)
 }
 
@@ -34,7 +34,7 @@ const strikeCount = () => {
         strikes={strikes}
       />
       <DashBoard
-        balls={ballCount}
+        ball={ballCount}
         strike={strikeCount}
         reset={reset}
         foul ={foul}
